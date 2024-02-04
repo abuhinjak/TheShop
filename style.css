@@ -1556,6 +1556,52 @@ main > div .heading {
     width: 100%;
 }
 
+.product nav .item-floating {
+    right: -18px;
+    top: 0;
+    background-color: var(--dark-color);
+}
+
+.product .product-about {
+    padding: 50px 0;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.product .product-about .text-block {
+    padding-bottom: 30px;
+}
+
+.product .product-about :where(h3, h4) {
+    font-family: var(--primary-font);
+    margin-bottom: 15px;
+}
+
+.product .product-about h3 {
+    font-size: 22px;
+}
+
+.product .product-about h4 {
+    font-weight: var(--fw600);
+}
+
+.product .product-about ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.product.detail .dotgrid .wrapper {
+    --grid-col: 250px;
+    --gutter: 30px;
+}
+
+.product .product-about.custom h3 {
+    font-size: 50px;
+    font-weight: var(--fw600);
+    text-align: center;
+    color: var(--light-color);
+}
+
 
 
 
