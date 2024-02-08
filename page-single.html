@@ -274,7 +274,7 @@
                             <div class="list-inline">
                                 <ul>
                                     <li><a href="#0" trigger-button data-target="search-float" ><i class="ri-search-line"></i></a></li>
-                                    <li><a href="#0"><span class="item-floating">3</span><i class="ri-shopping-bag-line"></i></a></li>
+                                    <li><a href="#0" trigger-button data-target="data-cart"><span class="item-floating">3</span><i class="ri-shopping-bag-line"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -410,8 +410,8 @@
                                             <ul>
                                                 <li><a href=""><i class="ri-heart-line"></i><span>Add to wishlist</span></a></li>
                                                 <li><a href=""><i class="ri-arrow-left-line"></i><span>Compare</span></a></li>
-                                                <li><a href=""><i class="ri-share-forward-line"></i><span>Share</span></a></li>
-                                                <li><a href=""><i class="ri-question-line"></i><span>Ask Question</span></a></li>
+                                                <li><a href="#0" trigger-button data-target="data-share"><i class="ri-share-forward-line"></i><span>Share</span></a></li>
+                                                <li><a href="#0" trigger-button data-target="data-question"><i class="ri-question-line"></i><span>Ask Question</span></a></li>
                                             </ul>
                                         </div>
                                         <div class="shipping">
@@ -487,7 +487,7 @@
                                                 <span>3 reviews</span>
                                             </div>
                                             <div class="button">
-                                                <a href="#" class="primary-btn">Write a review</a>
+                                                <a href="#0" class="primary-btn" trigger-button data-target="data-review">Write a review</a>
                                             </div>
                                         </div>
                                         <div class="body-review">
@@ -1089,10 +1089,10 @@
         </div>
     </div>
 
-    <!-- <div id="data-share" class="data-popup d-share">
+    <div id="data-share" class="data-popup d-share">
         <div class="wrap">
             <div class="data-content">
-                <a href="" class="close-trigger"><i class="ri-close-line"></i></a>
+                <a href="#0" class="close-trigger" close-button><i class="ri-close-line"></i></a>
                 <div class="form">
                     <label>Copy link</label>
                     <input type="text" disabled value="https://theshop.com/" />
@@ -1110,12 +1110,12 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <div id="data-question" class="data-popup d-question">
         <div class="wrap">
             <div class="data-content">
-                <a href="" class="close-trigger">
+                <a href="#0" class="close-trigger" close-button>
                     <i class="ri-close-line"></i>
                 </a>
                 <h3>The question</h3>
@@ -1137,15 +1137,215 @@
         </div>
     </div>
 
-    <!-- <div id="data-share" class="data-popup d-share">
+    <div id="data-review" class="data-popup d-review">
         <div class="wrap">
             <div class="data-content">
-                <a href="" class="close-trigger">
+                <a href="#0" class="close-trigger" close-button>
                     <i class="ri-close-line"></i>
                 </a>
+                <h3>Write a Review</h3>
+                <form>
+                    <div class="dotgrid">
+                        <div class="wrapper">
+                            <div>
+                                <input type="text" placeholder="Name">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span>Your rating: </span>
+                        <div class="stars">
+                            <input type="radio" name="rating" id="star5">
+                            <label for="star5"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star4">
+                            <label for="star4"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star3">
+                            <label for="star3"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star2">
+                            <label for="star2"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star1">
+                            <label for="star1"><i class="ri-star-fill"></i></label>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Review title">
+                    </div>
+                    <div>
+                        <textarea placeholder="Your review is..." cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit" class="secondary-btn">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <div id="data-cart" class="cart-menu">
+        <div class="wrap">
+            <a href="#0" class="close-trigger" close-button><i class="ri-close-line"></i></a>
+            <div class="scrollto cart-outer">
+                <div class="wrapper">
+                    <div class="cart-list">
+                        <div class="wrapper">
+                            <div class="cart-header">
+                                <h2>Shopping cart</h2>
+                            </div>
+                            <div class="cart-body scrollto">
+                                <div class="product-list">
+                                    <div class="wrapper">
+                                        <ul>
+                                            <li>
+                                                <div class="grouping">
+                                                    <div class="quantity">
+                                                        <div class="control">
+                                                            <button>-</button>
+                                                            <input type="text" value="1">
+                                                            <button>+</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="thumbnail">
+                                                        <a href="">
+                                                            <img src="assets/product_01.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="variants">
+                                                    <h4 class="dot-title"><a href="">The Sweater in Tosca</a></h4>
+                                                    <div class="color grey-color">
+                                                        <span>Color: </span>
+                                                        <span>Tosca </span>
+                                                    </div>
+                                                    <div class="size grey-color">
+                                                        <span>Size: </span>
+                                                        <span>L </span>
+                                                    </div>
+                                                    <div class="price">$45.00</div>
+                                                    <a href="" class="item-remove">
+                                                        <i class="ri-close-line"></i>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="grouping">
+                                                    <div class="quantity">
+                                                        <div class="control">
+                                                            <button>-</button>
+                                                            <input type="text" value="1">
+                                                            <button>+</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="thumbnail">
+                                                        <a href="">
+                                                            <img src="assets/product_02.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="variants">
+                                                    <h4 class="dot-title"><a href="">Ocean Blue LLC2</a></h4>
+                                                    <div class="color grey-color">
+                                                        <span>Color: </span>
+                                                        <span>Ocean </span>
+                                                    </div>
+                                                    <div class="size grey-color">
+                                                        <span>Size: </span>
+                                                        <span>L </span>
+                                                    </div>
+                                                    <div class="price">$57.00</div>
+                                                    <a href="" class="item-remove">
+                                                        <i class="ri-close-line"></i>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="grouping">
+                                                    <div class="quantity">
+                                                        <div class="control">
+                                                            <button>-</button>
+                                                            <input type="text" value="1">
+                                                            <button>+</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="thumbnail">
+                                                        <a href="">
+                                                            <img src="assets/product_07.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="variants">
+                                                    <h4 class="dot-title"><a href="">Solid Pink GIO</a></h4>
+                                                    <div class="color grey-color">
+                                                        <span>Color: </span>
+                                                        <span>Pink </span>
+                                                    </div>
+                                                    <div class="size grey-color">
+                                                        <span>Size: </span>
+                                                        <span>XL </span>
+                                                    </div>
+                                                    <div class="price">$45.00</div>
+                                                    <a href="" class="item-remove">
+                                                        <i class="ri-close-line"></i>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-footer">
+                                <div class="discount">
+                                    <form>
+                                        <input type="text" class="input" placeholder="Coupon">
+                                        <input type="submit" class="submit" value="Apply">
+                                    </form>
+                                </div>
+                                <div class="math-pricing">
+                                    <ul>
+                                        <li>
+                                            <span>Subtotal</span>
+                                            <span class="value"></span>
+                                        </li>
+                                        <ul>
+                                            <li><span>Shipping</span></li>
+                                            <li>
+                                                <div>
+                                                    <input type="radio" class="checker" name="shipping">
+                                                    <label for="">Free</label>
+                                                </div>
+                                                <span class="value">$0.00</span>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <input type="radio" class="checker" name="shipping">
+                                                    <label for="">Flat</label>
+                                                </div>
+                                                <span class="value">$10.00</span>
+                                            </li>
+                                        </ul>
+                                        <li>
+                                            <span>Promo discount</span>
+                                            <span class="value">- $0.00</span>
+                                        </li>
+                                        <li class="total">
+                                            <span>Total</span>
+                                            <span class="value">$147.00</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="button">
+                                    <a href="" class="secondary-btn">Checkout</a>
+                                    <a href="" class="grey-link">View cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
